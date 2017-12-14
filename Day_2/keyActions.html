@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>On Key Action</title>
+</head>
+<body>
+	<form id="form1" action="https://google.com">
+		Enter your name: <input id="name" type="text" onkeyup="keyupfunction();" onkeydown="keydownfunction();">
+	</form>
+	<script>
+		var keyupfunction = function(){
+			var form = document.getElementById('form1');
+			//debugger;
+			console.log("Key Up: "+form.name.value);
+		}
+		var keydownfunction = function(){
+			var form = document.getElementById('form1');
+			//debugger;
+			console.log("Key Down: "+form.name.value);
+		}
+	</script>
+</body>
+</html>

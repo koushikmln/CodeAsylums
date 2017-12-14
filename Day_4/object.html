@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Object</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function Blog(id,title,imageUrl,content){
+			this.id = id;
+			this.title = title;
+			this.imageUrl = imageUrl;
+			this.content = content;
+			this.log = function() {
+				console.log(this);
+			}
+		}
+
+		var blog1 = new Blog(1,"hi","http://google.com","i am batman");
+		//console.log(blog1);
+		blog1.log();
+		blog1.body = "bla bla bla bla bla";
+		blog1.log();
+
+		Blog.prototype.logPrototype = function() {
+			console.log(this);
+		};
+		var blog2 = new Blog(2,"hi","http://google.com","i am batman");
+		blog2.logPrototype();
+	</script>
+</body>
+</html>

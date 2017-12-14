@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DOM Manipulation</title>
+</head>
+<body>
+	<a href="https://www.w3schools.com/js//js_htmldom.asp">https://www.w3schools.com/js//js_htmldom.asp</a>
+	<p id="id"></p>
+	<p class="randomclass"></p>
+	<img id="cat" src="https://www.petmd.com/sites/default/files/petmd-cat-happy-10.jpg">
+	<script type="text/javascript">
+		document.getElementById('id').innerHTML = "Koushik";
+		var randomElements = document.getElementsByClassName('randomclass')
+		randomElements[0].innerHTML = "Koushik Class";
+		var tags = document.getElementsByTagName('p');
+		for (var i = tags.length - 1; i >= 0; i--) {
+			console.log(tags[i].innerHTML)
+		}
+		/*
+			<div id = "parent">
+				<p id="child1"></p>
+				<p id="child2"></p>
+			</div>
+			// get children and insert child1 child2 etc in the html using inner html property
+			var children = document.getElementById("parent").children;
+			children[0].innerHTML = "child1";
+		*/
+		// Change Element Property
+		document.getElementById("cat").src = "https://s7d2.scene7.com/is/image/PetSmart/PB1201_STORY_CARO-Authority-HealthyOutside-DOG-20160818?$PB1201$";
+		// We can change other element properties also.
+		console.log(window.innerWidth, window.innerHeight);
+		console.log(window.location.href);
+		// window.open("https://google.com");
+	</script>
+</body>
+</html>

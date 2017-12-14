@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>GET Request</title>
+</head>
+<body>
+	<button onclick="loadDoc()">Load Text</button>
+	<div id="ajax">
+		
+	</div>
+	<script type="text/javascript">
+		function loadDoc() {
+		  var formData = {"username":"koushik"};
+		  var xhttp = new XMLHttpRequest();
+		  xhttp.onreadystatechange = function() {
+		    if (this.readyState == 4 && this.status == 200) {
+		     document.getElementById("ajax").innerHTML = this.responseText;
+		    }
+		  };
+		  xhttp.open("POST", "http://localhost:3000/post", true);
+		  // xhttp.setRequestHeader("Content-Type", "application/json");
+	   //    xhttp.send(JSON.stringify(formData));
+	   
+			xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+			xhttp.send("username=koushik&password=koushik");
+	      
+		}
+	</script>
+</body>
+</html>

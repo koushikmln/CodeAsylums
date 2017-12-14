@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>On Change</title>
+</head>
+<body>
+	<form>
+		Select a value
+		<select id="animals" onchange="randomFunction()">
+			<option value="cat">cat</option>
+			<option value="dog">dog</option>
+			<option value="pikachu">pikachu</option>
+		</select>
+	</form>
+	<script type="text/javascript">
+		var randomFunction = function() {
+			alert(document.forms[0].animals.value);
+		}
+	</script>
+</body>
+</html>

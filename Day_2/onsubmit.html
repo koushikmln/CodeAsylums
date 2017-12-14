@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>On Submit</title>
+</head>
+<body>
+	<form onsubmit="randomFunction();" id="form1" action="https://google.com">
+		Enter your name: <input id="name" type="text">
+		<input type="submit">
+	</form>
+	<script>
+		var randomFunction = function(){
+			var form = document.getElementById('form1');
+			//debugger;
+			alert(form.name.value);
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>On Submit</title>
+</head>
+<body>
+	<form onsubmit="return validate();" action="https://google.com">
+		Enter your name: <input id="name" type="text">
+		<input type="submit">
+	</form>
+	<script>
+		function validate() {
+		    var name = document.forms[0].name.value;
+		    alert(name);
+		    if(name == "koushik"){
+		    	return true;
+		    }else{
+		    	return false;
+		    }
+		}
+	</script>
+</body>
+</html>

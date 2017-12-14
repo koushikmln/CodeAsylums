@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form Actions</title>
+</head>
+<body>
+	<form id="form1" action="https://google.com">
+		Enter your name: <input id="name" type="text">
+		<button type="button" onclick="submitForm()">Submit</button>
+		<button type="button" onclick="resetForm()">Reset</button>
+	</form>
+	<script type="text/javascript">
+		var submitForm = function() {
+			document.getElementById("form1").submit();
+		}
+		var resetForm = function() {
+			document.getElementById("form1").reset();
+		}
+	</script>
+</body>
+</html>
